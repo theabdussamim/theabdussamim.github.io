@@ -48,6 +48,9 @@
   .role{font-family:"JetBrains Mono",ui-monospace,monospace; font-size:.79rem; letter-spacing:.05em;
         color:var(--accent); text-transform:uppercase;}
   .lede{font-size:1.12rem; color:var(--muted); max-width:62ch;}
+  .method{font-size:.95rem; color:var(--muted); max-width:62ch; padding-left:14px;
+          border-left:2px solid var(--accent);}
+  .method b{color:var(--ink); font-weight:600;}
   .meta{display:flex; flex-wrap:wrap; gap:8px 22px; font-size:.9rem; color:var(--muted);
         border-top:1px solid var(--rule); padding-top:16px;}
   .meta b{color:var(--ink); font-weight:600;}
@@ -125,6 +128,10 @@
     <p class="lede">I build production systems on top of language models, and most of my work is
       the part where the model is wrong. Fabricated data, silent degradation, quota failure &mdash;
       found in production, characterised, then guarded against in code.</p>
+    <p class="method"><b>How I work:</b> I build with AI coding agents and treat what they produce
+      as untrusted input. Every guard below exists because something a model generated looked
+      correct and wasn&rsquo;t &mdash; which is the same habit that makes me useful on the other
+      side of it.</p>
     <div class="meta">
       <span><b>Kolkata / Bolpur</b>, West Bengal, India</span>
       <span><a href="mailto:the.abdus.samim@gmail.com">the.abdus.samim@gmail.com</a></span>
@@ -232,6 +239,26 @@
         <div class="row"><span class="tag learn">Learned</span>
           <p class="learn-txt">A secret verified after the commit is not a fix, it is an incident.
              The check belongs in front of the irreversible step.</p></div>
+      </article>
+
+      <article class="entry">
+        <div class="etop"><span class="idx">06</span><span class="sys">research corpus &middot; source provenance</span></div>
+        <div class="row"><span class="tag broke">Broke</span>
+          <p>Source material was arriving as summaries &mdash; reconstructed from memory or lifted
+             from secondary write-ups. They read as plausible and carried claims the original source
+             never made. Nothing downstream could tell them apart from real ones.</p></div>
+        <div class="row"><span class="tag built">Built</span>
+          <p>A capture rule enforced before anything gets classified or filed: retrieve the full
+             primary transcript first by automated extraction, direct paste second, flagged
+             secondary sources only as a last resort &mdash; with source quality declared on every
+             item rather than assumed.</p></div>
+        <div class="row result-row"><span class="tag result">Result</span>
+          <p><span class="num">139</span> sources indexed with provenance recorded per item, and a
+             standing register of every contested or unverified figure in the corpus, so anything
+             reading from it can check a number before repeating it.</p></div>
+        <div class="row"><span class="tag learn">Learned</span>
+          <p class="learn-txt">A plausible summary is more dangerous than a missing one. A gap
+             announces itself; a confident reconstruction does not.</p></div>
       </article>
 
     </div>
