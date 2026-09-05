@@ -261,6 +261,28 @@
              announces itself; a confident reconstruction does not.</p></div>
       </article>
 
+      <article class="entry">
+        <div class="etop"><span class="idx">07</span><span class="sys">live campaign &middot; silent rate-limiting</span></div>
+        <div class="row"><span class="tag broke">Broke</span>
+          <p>Nine near-identical outreach messages carrying the same link inside a 2.5-hour window
+             tripped a platform spam flag. Nothing was announced &mdash; no warning, no error, no
+             notification. The account simply stopped reaching people.</p></div>
+        <div class="row"><span class="tag built">Built</span>
+          <p>Operating rules derived from the incident and then encoded so they apply without being
+             remembered: per-channel pacing ceilings, mandatory wording variation per recipient, a
+             never-repeat guard that checks send history before composing, and a similarity check
+             that refuses copy too close to anything already sent.</p></div>
+        <div class="row result-row"><span class="tag result">Result</span>
+          <p>Reachability on the affected batch fell from roughly <span class="num">80%</span> to
+             <span class="num">0</span> &mdash; <span class="num">8</span> of <span class="num">8</span>
+             blocked &mdash; which is how the flag was detected at all. Rules were written into a
+             local model so the constraint travels with the work instead of living in my head.</p></div>
+        <div class="row"><span class="tag learn">Learned</span>
+          <p class="learn-txt">The platform never told me. A silent policy response looks exactly
+             like bad luck until you watch a rate against its own baseline. Now I instrument the
+             baseline first.</p></div>
+      </article>
+
     </div>
   </section>
 
@@ -299,6 +321,18 @@
               are documented above.</li>
           <li>Human-in-the-loop by design: the operator sends, never the application. A deliberate
               constraint against platform-ToS and account-ban risk.</li>
+        </ul>
+      </div>
+
+      <div class="sysitem">
+        <h3>Encoded operating doctrine <span class="yr">2026</span></h3>
+        <p class="stack">local model &middot; ollama</p>
+        <ul>
+          <li>Rules learned by running a live multi-channel campaign &mdash; channel priority,
+              pacing ceilings, contact-verification standards, and a never-repeat guard &mdash;
+              compiled into a local model so they are applied rather than recalled.</li>
+          <li><b>The doctrine is mine, derived from what failed in the field. The training
+              pipeline was AI-assisted</b> and I would not claim otherwise.</li>
         </ul>
       </div>
 
